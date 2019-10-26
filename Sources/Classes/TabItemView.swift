@@ -1,6 +1,10 @@
 import UIKit
 
-final class TabItemView: UIView {
+public protocol TabItemView: UIView {
+    var isSelected: Bool { set get }
+}
+
+final class DefaultTabItemView: UIView, TabItemView {
 
     private(set) var titleLabel: UILabel = UILabel()
 
